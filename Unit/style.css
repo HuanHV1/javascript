@@ -1,6 +1,205 @@
-.test{
-    color: green;
+*{margin: 0; padding: 0;}
+
+/* Add animation */
+ul li.active .slide .duoi2{
+    animation: duoivao 2s forwards;
 }
-img{
-    width: 50%;
+
+ul li.active .slide .duoi1{
+    animation: duoivao 1.5s forwards;
 }
+
+ul li.active .slide .tren1{
+    animation: trenxuong 1.5s forwards;
+}
+
+/* định nghĩa chuyển động */
+@-webkit-keyframes trenxuong{
+    from{
+        transform: translateX(100%) translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0) translateY(0);
+        opacity: 0.5;
+    }
+}
+@-webkit-keyframes duoivao{
+    from{
+        transform: translateX(-100%) translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0) translateY(0);
+        opacity: 0.3;
+    }
+}
+.slidewrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cacslide{
+    position: relative; height: 100%; width: 100%;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Hiá»‡n thanh scoll ngang*/
+}
+/* css cho cacslide */
+.cacslide ul li{
+    list-style: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+    opacity: 0;
+}
+.cacslide ul li.active{
+    opacity: 1;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide .anh{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .duoi1, 
+.slide .duoi2,
+.slide .tren1, 
+.slide .textnoidung{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    opacity: 0;
+}
+
+.textnoidung small {
+    font-weight:  bold;
+    font-size: 35px;
+    text-transform:  uppercase;
+    padding: 10px 0 12px 0;
+    display:  block;opacity: 0;
+}
+
+.textnoidung .ke {
+    width: 58%;
+    height: 4px;
+    margin: 1px 0 12px 0;
+    background: #ececec57;opacity: 0;
+}
+
+.textnoidung h2 {
+    font-family:  segoe ui light;
+    font-size: 70px;
+    font-weight: normal;
+    display:  block;
+    opacity: 0;
+}
+
+.cacslide ul li.active .textnoidung h2,
+.cacslide ul li.active .textnoidung small,
+.cacslide ul li.active .textnoidung .ke,
+.cacslide ul li.active .textnoidung p,
+.cacslide ul li.active .textnoidung .nut{
+    animation: divao 1s forwards;
+}
+@-webkit-keyframes divao{
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.cacslide ul li.active .textnoidung h2{animation-delay: 1s;}
+.cacslide ul li.active .textnoidung small{animation-delay: 1.2s;}
+.cacslide ul li.active .textnoidung .ke{animation-delay: 1.4s;}
+.cacslide ul li.active .textnoidung p{animation-delay: 1.6s;}
+.cacslide ul li.active .textnoidung .nut{animation-delay: 1.8s;}
+
+
+.slide .duoi1{
+    opacity: 0.3;
+    top:-55%;
+}
+.slide .duoi2{
+    opacity: 0.5;
+    top:-25%;
+}
+.slide .textnoidung{
+    width: 25%;
+    left: 4%;
+    z-index: 3;
+    opacity: 1;
+    top: 38%;
+    font-size: 157%;
+    color: white;
+}
+
+.textnoidung .nut {
+    border: 3px solid #ffffff;
+    display: inline-block;
+    list-style:  none;
+    text-decoration:  none;
+    color:  white;
+    padding: 10px 10px 10px 10px;
+    text-transform:  uppercase;
+    font-size: 16px;opacity: 0;
+}
+
+.textnoidung p {
+    font-size: 23px;
+    line-height: 26px;
+    color: #dac4c4;
+    margin-top: 1px;
+    margin-bottom: 1rem;opacity: 0;
+}
+.slide .tren1{
+    opacity: 0.3;
+    right: 0;
+}
+
+/* css btn chuyá»ƒn slide */
+.chuyenslide ul li:hover,
+.chuyenslide ul li.kichhoat {
+    background:  rgb(10, 10, 10);
+}
+
+.chuyenslide {
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+.chuyenslide ul li {
+    display:  inline-block;
+    border: 1px solid rgb(241, 234, 234);
+    text-indent: -99999px;
+    width:  20px;
+    height:  20px;
+    border-radius:  50%;
+    transition:  0.4s;
+    margin: 30px 1px;
+    cursor:  pointer;
+}
+
+.chuyenslide ul {
+    display: inline;
+}
+
