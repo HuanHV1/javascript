@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Hiệu ứng slide platic</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Optional CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+<body>
+  <!-- 
+  Khi click vào nút có 2 phần tử bị tác động, 
+  1, slide hiện tại
+  2, slide tiếp theo
+  Muốn xử lý hiệu ứng 
+  1, xác định slide hiện tại và slide tiếp theo là cái nào.
+
+  -->
+  <div id="slidewrapper">
+    <div class="slides">
+      <ul>
+        <li class="active" style="background-image: url(images/slide1.jpg)"></li>
+        <li style="background-image: url(images/slide2.jpg)"></li>
+        <li style="background-image: url(images/slide3.jpg)"></li>
+      </ul>
+    </div>
+    <div class="btns">
+      <b class="left">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </b>
+      <b class="right">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </b>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

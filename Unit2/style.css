@@ -1,0 +1,63 @@
+.card {
+    padding-top: 20px;
+    margin: 10px 0 20px 0;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card.hovercard .cardheader {
+    background: #000000;
+    background-size: cover;
+    height: 178px;    
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -78px;
+    left: -45px;
+    margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.cardheader .title{
+    margin-bottom: 16px;
+}
+.cardheader .title p span{
+    margin-left: 62px;
+}
+.cardheader .status{
+    font-size: 10px;
+}
+.cardheader .classic{
+    font-size: 16px;
+}
+.cardheader p{
+    margin-bottom: 0px;
+}
+.avatar p {
+    position: relative;
+    top: -62px;
+    left: 125px;
+    color: white;
+}

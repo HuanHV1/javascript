@@ -1,0 +1,89 @@
+*{margin: 0; padding: 0;}
+html,body, #slidewrapper, .slides, .slides ul, .slides ul li{
+    width: 100%;
+    height: 100%;
+}
+#slidewrapper{
+    overflow: hidden;
+    position:  relative;
+}
+.slides ul li{
+    list-style: none;
+    position:  absolute;
+    opacity: 0;
+    transition: 0.4s;
+}
+.btns{
+    position:  absolute;
+    font-size: 53px;
+    top: 0px;
+    right: 0px;
+    color: #d0cfcf;
+    margin:  10px 10px;
+    cursor:  pointer;
+}
+
+.btns b:hover {
+    color: #251a18;
+}
+.slides ul .active{
+    opacity: 1;
+}
+.slides ul .remove{
+    opacity: 0;
+}
+.slideout{
+    animation: out 2s forwards;
+}
+@-webkit-keyframes out{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+.slidein{
+    animation: in 2s forwards;
+
+}
+@-webkit-keyframes in{
+    from{
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.lui1{
+    animation: lui1 2s forwards;
+}
+@-webkit-keyframes lui1{
+    from{
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+.lui2{
+    animation: lui2 2s forwards;
+
+}
+@-webkit-keyframes lui2{
+    from{
+        transform: scale(2);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
