@@ -1,56 +1,71 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Avenir Next Regular", sans-serif;
+    ;
+}
 
-.fa {
-    padding: 4px;
-    font-size: 30px;
-    width: 39px;
-    text-align: center;
-    text-decoration: none;
-    margin: 1px 1px;
-} 
-  .fa:hover {
-      opacity: 0.7;
-  }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  .fa-google {
-    background: #dd4b39;
-    color: white;
-  }
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-
-.col-md-3{
+.userprofile-panel,
+.tab-accordnion {
     margin: 0px !important;
     padding: 0px !important;
     overflow: hidden !important;
 }
+
 .card {
     border: none !important;
     border-radius: 0px !important;
 }
-.cardheader .account-title{
+
+.fa {
+    padding: 8px;
+    font-size: 32px;
+    width: 1.6em;
+    text-align: center;
+    text-decoration: none;
+    margin: 1px 1px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.account-change-passsword {
+    color: #000;
+}
+
+.cardheader .account-title {
     display: none;
 }
 
@@ -62,6 +77,7 @@
     width: 10em;
     text-align: right;
 }
+
 .account-status .status {
     font-size: 0.8em;
 }
@@ -72,18 +88,20 @@
     margin-left: 0.5em;
 }
 
-.account-private{
+.account-private {
     position: relative;
     float: right;
     margin-right: 6%;
     top: -9em;
     color: white;
-    width: 10em; 
+    width: 10em;
     text-align: right;
 }
-.account-private p span{
+
+.account-private p span {
     margin: 0 0.5em;
 }
+
 .card .hovercard {
     position: relative;
     padding-top: 0;
@@ -94,7 +112,7 @@
 .card.hovercard .cardheader {
     background: #000000;
     background-size: cover;
-    height: 158px;    
+    height: 158px;
     color: white;
     text-align: left;
     font-size: 13px;
@@ -127,127 +145,155 @@
     width: 10em;
     text-align: right;
 }
-.account-edit a{
+
+.account-edit a {
     text-decoration: underline;
     font-size: 16px;
     color: rgb(0, 0, 0);
 }
+
 .user-info {
     color: #000;
 }
+
 .user-info h2 {
-    font-weight: 900;   
+    font-weight: 900;
     font-size: 22px;
     margin-top: -15px;
-    
 }
+
 .user-detail {
     float: left;
-    width: 100%;    
+    width: 100%;
     font-weight: bold;
-    font-size: 11px;   
-    margin-bottom: 10px; 
+    font-size: 11px;
+    margin-bottom: 10px;
 }
-.user-detail .user-detail-title{
+
+.user-detail .user-detail-title {
     text-transform: uppercase;
     width: 35%;
     float: left;
 }
-.user-detail .user-detail-content{
+
+.user-detail .user-detail-content {
     width: 65%;
     float: left;
 }
 
-.user-more{
+.account-info-content .user-more {
     display: none;
-    transition: 2s;
 }
-.user-btn-more{
+
+.user-btn-more {
     font-size: 16px;
     text-decoration: underline;
     color: #000;
 }
-.account-info-content{
+
+.account-info-content {
     padding-left: 2em;
     padding-right: 2em;
     margin-bottom: 10px;
     color: #000;
-    max-width: 300px;
+    max-width: 500px;
 }
-.social-media{
+
+.social-media {
     margin: 25px 0px;
+    width: 100%;
 }
-.account-info{
+
+.account-info {
     color: #000;
 }
-.account-info .account-title{
+
+.account-info .account-title {
     padding: 10px;
     background: #000;
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
-.account-logout-mobile{
+
+.account-logout-mobile {
     width: 100%;
     text-align: center;
     margin: 15px 0px;
 }
-.account-logout-mobile a{
+
+.account-logout-mobile a {
     color: #000;
     text-decoration: underline;
     font-size: 23px;
     font-weight: bold;
 }
-.logout-logout-pc{
+
+.logout-logout-pc {
     display: none;
 }
+
+/* End responsive 911px*/
+
+.account-profile {
+    background: #f0f3f3;
+    padding-bottom: 1em;
+}
+
+.user-line {
+    display: none;
+}
+
 /* 
-* Responsive*
+* Responsive 991px*
 */
-@media screen and (min-width: 768px) {
-    .account-logout-mobile{
-        display: none   ;
-        color: #bb0000;
+
+@media screen and (min-width: 991px) {
+    .user-line {
+        display: block;
     }
-    .logout-logout-pc{
-        display: inline;
+    .account-logout-mobile {
+        display: none;
     }
-    .user-more{
-        display: inline;
+    .logout-logout-pc {
+        display: block;
     }
-    .user-btn-more{
+    .account-info-content div.user-more {
+        display: block;
+    }
+    .user-btn-more {
         display: none;
     }
     .card.hovercard .avatar img {
         width: 7em;
         height: 7em;
     }
-    .card.hovercard .avatar{
+    .card.hovercard .avatar {
         top: -5.1em;
     }
-    .account-private{
+    .account-private {
         top: -1em;
     }
-    .account-edit a{
-        color: white;       
-        text-decoration:none;         
+    .account-edit a {
+        color: white;
+        text-decoration: none;
     }
-    .account-edit a i{        
-        font-size: 0px;        
+    .account-edit a i {
+        font-size: 0px;
     }
-    .account-edit{
+    .account-edit {
         top: -9em;
     }
-    .cardheader .account-title{
-        display: inline;
+    .cardheader .account-title {
+        display: block;
     }
-    .cardheader .account-title p{
+    .cardheader .account-title p {
         padding: 20px 10px;
     }
     .account-status {
         top: -2em;
         float: none;
-        margin-left: 4%;
+        margin-left: 0.8em;
         width: 7em;
         text-align: left;
     }
@@ -255,7 +301,80 @@
         font-size: 1.4em;
         margin-left: 0px;
     }
-    .account-info-content{
+    .account-info-content {
         margin-top: 39px;
+        padding-left: 0.8em;
+    }
+    .user-detail .user-detail-title {
+        width: 100%;
+    }
+    .user-detail .user-detail-content {
+        width: 100%;
+        font-weight: 900;
+        font-size: 1.3em;
+    }
+    .user-detail {
+        margin-bottom: 20px;
+    }
+    .user-info h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .fa {
+        font-size: 26px;
     }
 }
+
+/* accordnion */
+/*
+ * jQuery Bootstrap Responsive Tabs v2.0.1 | Valeriu Timbuc - vtimbuc.com
+ * github.com/vtimbuc/bootstrap-responsive-tabs
+ * @license WTFPL http://www.wtfpl.net/about/
+ */
+ .responsive-tabs-container .tab-pane {
+    margin-bottom: 15px;
+  }
+  .responsive-tabs-container .accordion-link {
+    display: none;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    color: #333;
+  }
+  @media (max-width: 767px) {
+    .responsive-tabs-container.accordion-xs .nav-tabs {
+      display: none;
+    }
+    .responsive-tabs-container.accordion-xs .accordion-link {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .responsive-tabs-container.accordion-sm .nav-tabs {
+      display: none;
+    }
+    .responsive-tabs-container.accordion-sm .accordion-link {
+      display: block;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .responsive-tabs-container.accordion-md .nav-tabs {
+      display: none;
+    }
+    .responsive-tabs-container.accordion-md .accordion-link {
+      display: block;
+    }
+  }
+  @media (min-width: 1200px) {
+    .responsive-tabs-container.accordion-lg .nav-tabs {
+      display: none;
+    }
+    .responsive-tabs-container.accordion-lg .accordion-link {
+      display: block;
+    }
+  }
+  
+
+/* End accordnion */

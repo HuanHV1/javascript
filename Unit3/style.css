@@ -1,141 +1,425 @@
-/*************** SCROLLBAR BASE CSS ***************/
- 
-.scroll-wrapper {
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Avenir Next Regular", sans-serif;
+    ;
+}
+
+.userprofile-panel,
+.tab-accordnion {
+    margin: 0px !important;
+    padding: 0px !important;
     overflow: hidden !important;
-    padding: 0 !important;
-    position: relative;
 }
- 
-.scroll-wrapper > .scroll-content {
+
+.card {
     border: none !important;
-    box-sizing: content-box !important;
-    height: auto;
-    left: 0;
-    margin: 0;
-    max-height: none;
-    max-width: none !important;
-    overflow: scroll !important;
-    padding: 0;
-    position: relative !important;
-    top: 0;
-    width: auto !important;
+    border-radius: 0px !important;
 }
- 
-.scroll-wrapper > .scroll-content::-webkit-scrollbar {
-    height: 0;
-    width: 0;
+
+.fa {
+    padding: 8px;
+    font-size: 32px;
+    width: 1.6em;
+    text-align: center;
+    text-decoration: none;
+    margin: 1px 1px;
 }
- 
-.scroll-element {
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.account-change-passsword {
+    color: #000;
+}
+
+.cardheader .account-title {
     display: none;
 }
-.scroll-element, .scroll-element div {
-    box-sizing: content-box;
+
+.account-status {
+    position: relative;
+    top: 4em;
+    float: right;
+    margin-right: 6%;
+    width: 10em;
+    text-align: right;
 }
- 
-.scroll-element.scroll-x.scroll-scrollx_visible,
-.scroll-element.scroll-y.scroll-scrolly_visible {
-    display: block;
+
+.account-status .status {
+    font-size: 0.8em;
 }
- 
-.scroll-element .scroll-bar,
-.scroll-element .scroll-arrow {
-    cursor: default;
+
+.account-status .classic {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-left: 0.5em;
 }
- 
-.scroll-textarea {
-    border: 1px solid #cccccc;
-    border-top-color: #999999;
+
+.account-private {
+    position: relative;
+    float: right;
+    margin-right: 6%;
+    top: -9em;
+    color: white;
+    width: 10em;
+    text-align: right;
 }
-.scroll-textarea > .scroll-content {
-    overflow: hidden !important;
+
+.account-private p span {
+    margin: 0 0.5em;
 }
-.scroll-textarea > .scroll-content > textarea {
-    border: none !important;
-    box-sizing: border-box;
-    height: 100% !important;
-    margin: 0;
-    max-height: none !important;
-    max-width: none !important;
-    overflow: scroll !important;
-    outline: none;
-    padding: 2px;
-    position: relative !important;
-    top: 0;
-    width: 100% !important;
-}
-.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
-    height: 0;
-    width: 0;
-}
- 
- 
- 
- 
-/*************** SIMPLE INNER SCROLLBAR ***************/
- 
-.scrollbar-inner > .scroll-element,
-.scrollbar-inner > .scroll-element div
-{
-    border: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    z-index: 10;
-}
- 
-.scrollbar-inner > .scroll-element div {
-    display: block;
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
-}
- 
-.scrollbar-inner > .scroll-element.scroll-x {
-    bottom: 2px;
-    height: 8px;
-    left: 0;
-    width: 100%;
-}
- 
-.scrollbar-inner > .scroll-element.scroll-y {
-    height: 100%;
-    right: 2px;
-    top: 0;
-    width: 8px;
-}
- 
-.scrollbar-inner > .scroll-element .scroll-element_outer {
+
+.card .hovercard {
+    position: relative;
+    padding-top: 0;
     overflow: hidden;
+    text-align: center;
 }
- 
-.scrollbar-inner > .scroll-element .scroll-element_outer,
-.scrollbar-inner > .scroll-element .scroll-element_track,
-.scrollbar-inner > .scroll-element .scroll-bar {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+
+.card.hovercard .cardheader {
+    background: #000000;
+    background-size: cover;
+    height: 158px;
+    color: white;
+    text-align: left;
+    font-size: 13px;
+    font-weight: bold;
 }
- 
-.scrollbar-inner > .scroll-element .scroll-element_track,
-.scrollbar-inner > .scroll-element .scroll-bar {
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-    opacity: 0.4;
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -9em;
+    right: -2em;
+    margin-bottom: -8em;
 }
- 
-.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
-.scrollbar-inner > .scroll-element .scroll-bar { background-color: #c2c2c2; }
-.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
-.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
- 
- 
-/* update scrollbar offset if both scrolls are visible */
- 
-.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_track { left: -12px; }
-.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_track { top: -12px; }
- 
- 
-.scrollbar-inner > .scroll-element.scroll-x.scroll-scrolly_visible .scroll-element_size { left: -12px; }
-.scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size { top: -12px; }
+
+.card.hovercard .avatar img {
+    width: 13em;
+    height: 13em;
+    max-width: 25em;
+    max-height: 25em;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.account-edit {
+    position: relative;
+    top: -4em;
+    float: right;
+    margin-right: 6%;
+    font-weight: bold;
+    width: 10em;
+    text-align: right;
+}
+
+.account-edit a {
+    text-decoration: underline;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+.user-info {
+    color: #000;
+}
+
+.user-info h2 {
+    font-weight: 900;
+    font-size: 22px;
+    margin-top: -15px;
+}
+
+.user-detail {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.user-detail .user-detail-title {
+    text-transform: uppercase;
+    width: 35%;
+    float: left;
+}
+
+.user-detail .user-detail-content {
+    width: 65%;
+    float: left;
+}
+
+.account-info-content .user-more {
+    display: none;
+}
+
+.user-btn-more {
+    font-size: 16px;
+    text-decoration: underline;
+    color: #000;
+}
+
+.account-info-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    margin-bottom: 10px;
+    color: #000;
+    max-width: 500px;
+}
+
+.social-media {
+    margin: 25px 0px;
+    width: 100%;
+}
+
+.account-info {
+    color: #000;
+}
+
+.account-info .account-title {
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.account-logout-mobile {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.account-logout-mobile a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logout-logout-pc {
+    display: none;
+}
+
+/* End responsive 911px*/
+
+.account-profile {
+    background: #f0f3f3;
+    padding-bottom: 1em;
+}
+
+.user-line {
+    display: none;
+}
+
+/* 
+* Responsive 991px*
+*/
+
+@media screen and (min-width: 991px) {
+    .user-line {
+        display: block;
+    }
+    .account-logout-mobile {
+        display: none;
+    }
+    .logout-logout-pc {
+        display: block;
+    }
+    .account-info-content div.user-more {
+        display: block;
+    }
+    .user-btn-more {
+        display: none;
+    }
+    .card.hovercard .avatar img {
+        width: 7em;
+        height: 7em;
+    }
+    .card.hovercard .avatar {
+        top: -5.1em;
+    }
+    .account-private {
+        top: -1em;
+    }
+    .account-edit a {
+        color: white;
+        text-decoration: none;
+    }
+    .account-edit a i {
+        font-size: 0px;
+    }
+    .account-edit {
+        top: -9em;
+    }
+    .cardheader .account-title {
+        display: block;
+    }
+    .cardheader .account-title p {
+        padding: 20px 10px;
+    }
+    .account-status {
+        top: -2em;
+        float: none;
+        margin-left: 0.8em;
+        width: 7em;
+        text-align: left;
+    }
+    .account-status .classic {
+        font-size: 1.4em;
+        margin-left: 0px;
+    }
+    .account-info-content {
+        margin-top: 39px;
+        padding-left: 0.8em;
+    }
+    .user-detail .user-detail-title {
+        width: 100%;
+    }
+    .user-detail .user-detail-content {
+        width: 100%;
+        font-weight: 900;
+        font-size: 1.3em;
+    }
+    .user-detail {
+        margin-bottom: 20px;
+    }
+    .user-info h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .fa {
+        font-size: 26px;
+    }
+}
+
+/* accordnion */
+
+.wrapper {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.accordion {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.accordion-title {
+    display: inline-block;
+}
+
+.accordion-title a {
+    display: block;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-size: 80%;
+    
+}
+
+.accordion-title.active a {
+    border: 1px solid grey;
+    border-bottom: white;
+    background-color: white;
+}
+
+.accordion-content {
+    float: right;
+    width: 100%;
+    margin-top: -1px;
+    margin-bottom: 20px;
+    padding-top: 1em;
+    text-align: left;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    ;
+}
+
+@media (max-width: 48em) {
+    .accordion {
+        text-align: left;
+    }
+    .accordion-title,
+    .accordion-content {
+        display: block;
+        margin: 0;
+    }
+    .accordion-title a {
+        border: 1px solid grey;
+        ;
+        border-bottom: none;
+    }
+    .accordion-title:last-of-type a {
+        border-bottom: 1px solid grey;
+        ;
+    }
+    .accordion-title a:hover,
+    .accordion-title.active a {
+        background: #e7e7e7;
+    }
+    .accordion-title a:before {
+        content: "+";
+        width: 1em;
+        display: inline-block;
+    }
+    .accordion-title.active a:before {
+        content: "-";
+    }
+    .accordion-content {
+        position: relative;
+        overflow: hidden;
+        padding: 20px;
+    }
+    .no-js .accordion-content {
+        padding: 1em;
+        overflow: auto;
+        display: block;
+    }
+    .accordion-content:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        content: '';
+    }
+}
+
+/* End accordnion */

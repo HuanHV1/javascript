@@ -1,136 +1,229 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    body {
-      position: relative;
-    }
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    #section1 {
-      padding-top: 50px;
-      height: 500px;
-      color: #fff;
-      background-color: #1E88E5;
-    }
-
-    #section2 {
-      padding-top: 50px;
-      height: 500px;
-      color: #fff;
-      background-color: #673ab7;
-    }
-
-    #section3 {
-      padding-top: 50px;
-      height: 500px;
-      color: #fff;
-      background-color: #ff9800;
-    }
-
-    #section41 {
-      padding-top: 50px;
-      height: 500px;
-      color: #fff;
-      background-color: #00bcd4;
-    }
-
-    #section42 {
-      padding-top: 50px;
-      height: 500px;
-      color: #fff;
-      background-color: #009688;
-    }
-  </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-  <div data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">WebSiteName</a>
-        </div>
-        <div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li>
-                <a href="#section1">Section 1</a>
-              </li>
-              <li>
-                <a href="#section2">Section 2</a>
-              </li>
-              <li>
-                <a href="#section3">Section 3</a>
-              </li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Section 4
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#section41">Section 4-1</a>
-                  </li>
-                  <li>
-                    <a href="#section42">Section 4-2</a>
-                  </li>
-                </ul>
-              </li>
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu 1</a>
+                </li>
+                <li>
+                    <a href="#">Menu 2</a>
+                </li>
+                <li>
+                    <a href="#">Menu 3</a>
+                </li>
             </ul>
-          </div>
         </div>
-      </div>
-    </nav>
 
-    <div id="section1" class="container-fluid">
-      <h1>Section 1</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
+        <div class="row">
+            <div class="col-md-3 userprofile-panel">
+                <!-- start account profile -->
+                <div class="account-profile">
+                    <!-- start card header -->
+                    <div class="card hovercard">
+                        <div class="cardheader">
+                            <div class="account-title">
+                                <p class="text-uppercase">your personal info</p>
+                            </div>
+                            <div class="account-status">
+                                <span class="text-uppercase status">status</span>
+                                <span class="classic">classic</span>
+                            </div>
+                        </div>
+                        <div class="avatar">
+                            <img alt="" src="images/1.jpg">
+                        </div>
+                        <div class="account-private">
+                            <p class="text-uppercase">
+                                <span class="glyphicon glyphicon-lock"></span>private</p>
+                        </div>
+                    </div>
+                    <!-- end card header -->
+                    <div class="account-edit">
+                        <a href="#">
+                            <span class="glyphicon">&#x270f;</span>
+                            <i>edit</i>
+                        </a>
+                    </div>
+                    <!-- End account profile -->
+                    <div class="clearfix"></div>
+                    <div class="account-info-content">
+                        <!-- start user info -->
+                        <div class="user-info">
+                            <h2>joanna smith</h2>
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">username</div>
+                                <div class="user-detail-content">joanna</div>
+                            </div>
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">dob</div>
+                                <div class="user-detail-content">12 june 1987</div>
+                            </div>
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">country</div>
+                                <div class="user-detail-content">united kingdom</div>
+                            </div>
+                            <hr class="user-line" style=" clear:both;margin:1em 0; border-top: 1px solid #cbc8c8;" />
+                        </div>
+                        <div class="user-more">
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">phone number</div>
+                                <div class="user-detail-content">+84 234 567 891</div>
+                            </div>
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">job title</div>
+                                <div class="user-detail-content">project manager</div>
+                            </div>
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">languages</div>
+                                <div class="user-detail-content">english, spanish</div>
+                            </div>
+                            <div class="user-detail">
+                                <div class="uppercase user-detail-title">interrests</div>
+                                <div class="user-detail-content">design, photography, tech, business, development.</div>
+                            </div>
+                            <!-- End user info -->
+                            <!-- start social media -->
+                            <div class="social-media">
+                                <!-- Add font awesome icons -->
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-google"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="#" class="fa fa-youtube"></a>
+                            </div>
+                            <!-- end social media -->
+                            <!-- start account info -->
+                            <div class="account-info">
+                                <div class="account-title uppercase">your account info</div>
+                                <div class="user-detail">
+                                    <div class="uppercase user-detail-title">job title</div>
+                                    <div class="user-detail-content">joanna.smith@gmail.com</div>
+                                </div>
+                                <div class="user-detail">
+                                    <div class="uppercase user-detail-title">pasword</div>
+                                    <div class="user-detail-content">********</div>
+                                    <a href="#" class="account-change-passsword">change passsword</a>
+                                </div>
+
+                                <div class="logout-logout-pc">
+                                    <a href="#">log out</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end account info -->
+                        <!--btn less mores-->
+                        <a class="user-detail user-btn-more">more</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-9 tab-accordnion">
+                <div class="wrapper">
+                    <dl class="accordion" role='navigation'>
+                        <dt class="accordion-title">
+                            <a href="#yourstay">Your stay</a>
+                        </dt>
+                        <dd id="yourstay" class="accordion-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                        </dd>
+                        <dt class="accordion-title">
+                            <a href="#yourevent">your event</a>
+                        </dt>
+                        <dd id="yourevent" class="accordion-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                        </dd>
+                        <dt class="accordion-title">
+                            <a href="#order">order</a>
+                        </dt>
+                        <dd id="order" class="accordion-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                        </dd>
+                        <dt class="accordion-title">
+                            <a href="#paymentmethods">payment methods</a>
+                        </dt>
+                        <dd id="paymentmethods" class="accordion-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                        </dd>
+                        <dt class="accordion-title">
+                            <a href="#shaoamembershipeets">aoa membership</a>
+                        </dt>
+                        <dd id="shaoamembershipeets" class="accordion-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                        </dd>
+                        <dt class="accordion-title">
+                            <a href="#settings">settings</a>
+                        </dt>
+                        <dd id="settings" class="accordion-content">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora mollitia animi eum omnis? Dolor, quas quos ad illo nemo
+                            animi cupiditate neque eius vero provident quaerat, ducimus dolorum doloribus dolorem. Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Nam fugiat impedit incidunt nobis sapiente
+                            totam excepturi quam itaque eos, maiores culpa cumque facilis dolor eum. Vel ipsam reprehenderit
+                            odio cumque?
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="section2" class="container-fluid">
-      <h1>Section 2</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
+    <div class="clearfix"></div>
+    <div class="account-logout-mobile">
+        <a href="#">log out</a>
     </div>
-    <div id="section3" class="container-fluid">
-      <h1>Section 3</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
     </div>
-    <div id="section41" class="container-fluid">
-      <h1>Section 4 Submenu 1</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-    </div>
-    <div id="section42" class="container-fluid">
-      <h1>Section 4 Submenu 2</h1>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-      <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the
-        navigation bar while scrolling!</p>
-    </div>
-  </div>
-</div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
 </body>
 
 </html>
